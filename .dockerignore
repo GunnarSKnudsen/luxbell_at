@@ -1,0 +1,7 @@
+# Ignore dev and version control
+.git
+.gitignore
+*.md
+TODO_and_changes.md
+node_modules
+.DS_Store
