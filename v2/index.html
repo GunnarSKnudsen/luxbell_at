@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!--
+    MOUNT POINT DETECTION — must stay the first thing in <head>.
+
+    Every URL in this project (stylesheet, modules, images, PDFs, links) is
+    written relative and resolves against <base>. This script works out what
+    <base> should be and inserts it before the browser parses anything else,
+    so the same files work unchanged at
+
+        /            a normal web root
+        /v2/         the preview subfolder
+        /anything/   any other subfolder
+
+    with no build step, no server configuration and nothing to edit by hand.
+
+    How: a URL that ends in "/" is a folder, so it is already the mount point.
+    A URL that does not is a route (/kontakt, /en/kontakt), so the last
+    segment — and a language prefix in front of it — belong to the route and
+    not to the mount point.
+  -->
+  <script>
+    (function () {
+      var LANGS = ['de', 'en'];
+      var path = window.location.pathname;
+
+      // A trailing file name (index.html, 404.html) leaves a folder behind.
+      path = path.replace(/[^/]*\.[^/]*$/, '');
+
+      var segments = path.split('/').filter(Boolean);
+
+      // No trailing slash means the last segment is a route slug, not a folder.
+      if (!/\/$/.test(path)) segments.pop();
+      if (segments.length && LANGS.indexOf(segments[segments.length - 1]) !== -1) segments.pop();
+
+      var base = document.createElement('base');
+      base.setAttribute('href', '/' + (segments.length ? segments.join('/') + '/' : ''));
+      document.head.appendChild(base);
+    })();
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LUXbell – Fenster, Türen, Sonnenschutz</title>
+  <meta name="description" content="LUXbell Bauelemente Handels GmbH – Fenster, Türen und Sonnenschutz. Objektgeschäft mit Baufirmen, Genossenschaften und Architekten.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LUXbell">
+  <meta property="og:title" content="LUXbell – Fenster, Türen, Sonnenschutz">
+  <meta property="og:description" content="LUXbell Bauelemente Handels GmbH – Fenster, Türen und Sonnenschutz.">
+  <meta property="og:image" content="assets/images/Bau-Banner.png">
+  <meta name="theme-color" content="#363D4C">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="">
+  <link rel="alternate" hreflang="de" href="">
+  <link rel="alternate" hreflang="en" href="">
+
+  <link rel="preload" href="assets/fonts/corbert-regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-skip-link>Zum Inhalt springen</a>
+
+  <header id="site-header"></header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer id="site-footer"></footer>
+
+  <script type="module" src="src/main.js"></script>
+  <noscript>
+    <p style="padding:2rem;text-align:center">
+      Diese Website benötigt JavaScript. Bitte aktivieren Sie JavaScript in Ihrem Browser.<br>
+      This website requires JavaScript. Please enable JavaScript in your browser.<br>
+      LUXbell Bauelemente Handels GmbH · Prießnitzgasse 6/1/3, 2340 Mödling ·
+      <a href="tel:+436768858388">+43 676 88 58 38 88</a> ·
+      <a href="mailto:office@luxbell.at">office@luxbell.at</a>
+    </p>
+  </noscript>
+</body>
+</html>

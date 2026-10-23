@@ -1,0 +1,70 @@
+/* Download cards ----------------------------------------------------------- */
+
+.downloads {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.downloads__link {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-4);
+  height: 100%;
+  padding: var(--space-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  color: var(--text-heading);
+  text-decoration: none;
+  transition:
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.downloads__link:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  color: var(--text-heading);
+}
+
+.downloads__icon {
+  color: var(--accent-strong);
+}
+
+.downloads__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.downloads__label {
+  font-weight: 700;
+}
+
+.downloads__meta {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.downloads__note {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.downloads__action {
+  color: var(--text-faint);
+  transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.downloads__link:hover .downloads__action {
+  color: var(--accent-strong);
+  transform: translateY(2px);
+}

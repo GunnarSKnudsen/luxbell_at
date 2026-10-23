@@ -6,21 +6,23 @@ const LUXBELL_CONTENT = {
   de: {
     siteTitle: 'LUXbell - Fenster - Türen - Sonnenschutz',
     companyName: 'LUXbell',
-    companySubtitle: 'Bauelemente Handels GmbH',
+    companySubtitle: 'Fenster und Türen Handels GmbH',
 
     contact: {
       phone: '+43 676 88 58 38 88',
-      address: 'Prießnitzgasse 6/1/3',
-      postalCode: '2340',
-      city: 'Mödling',
+      address: 'Feldgasse 46',
+      postalCode: '3130',
+      city: 'Herzogenburg',
       email: 'office@luxbell.at',
+      web: 'www.luxbell-fenster.at',
     },
 
     legal: {
-      tradeRegister: 'Firmenbuch Nr: 245939a',
-      vatId: 'ID-Nummer: ATU57764501',
-      gisa: 'GISA Zahl: 10118207',
-      authority: 'Bezirkshauptmannschaft Mödling',
+      tradeRegister: 'Firmenbuchnummer: FN 674264',
+      vatId: 'UID-Nummer: ATU83068543',
+      gisa: 'GISA Zahl: 39419538',
+      taxNumber: 'Steuernummer: 29 247/1732',
+      authority: 'Bezirkshauptmannschaft St. Pölten',
     },
 
     nav: [
@@ -73,27 +75,25 @@ const LUXBELL_CONTENT = {
         body: 'Kunststofffenster überzeugen durch ansprechendes modernes Design, qualitativ hochwertige Fertigungstechnik und beste thermische Eigenschaften.',
         products: [
           {
-            name: 'Aluplast IDEAL 5000',
-            image: 'IDEAL5000_Fenster_quadratisch.jpg',
-            pdfUrl: 'docs/Flyer_IDEAL5000.pdf',
+            name: 'Aluplast IDEAL NEO',
+            image: 'IDEAL_NEO_Fenster.jpg',
             features: [
-              'Uf-Wert von 1,2 W/m²K',
-              'Mitteldichtungssystem mit drei Dichtebenen für erhöhten Einbruchschutz',
-              'Verglasungsstärke bis 41 mm',
-              'Designvielfalt (Classic-line fv | Classic-line hfv | Soft-line hfv | Round-line hfv)',
-              'RC2 (WK2): geprüfte Einbruchsicherheit',
+              '76 mm Bautiefe',
+              'Mitteldichtungssystem mit drei Dichtebenen für einen erhöhten Einbruchschutz',
+              'Glasleisten – Qube-line',
+              'Verglasungsstärke Flügel max. 53 mm',
+              'RC2 geprüfte Einbruchsicherheit möglich',
               'Nicht sichtbare Entwässerung möglich',
-              'Hervorragender Schallschutz bis Schallschutzklasse IV',
-              'In zahlreichen Dekorvarianten verfügbar',
-              'Aluminiumvorsatzschale aluskin® erhältlich',
             ],
+          },
+          {
+            name: 'Aluplast IDEAL 8000',
+            image: 'IDEAL8000_Fenster_quadratisch.jpg',
           },
         ],
         body2: 'Die langlebigen Kunststoffprofile zeichnen sich durch langjährige Beständigkeit gegen Witterungsverhältnisse aus und garantieren Ihnen Zuverlässigkeit und Sorgenfreiheit über viele Jahre. Produkte auf höchstem technischen Niveau.',
-        images: ['8000.jpg', '5000.jpg'],
         body3: 'Clevere Technik – edles Design: Die elegante Optik von Aluminium liegt voll im Trend. Auch der Look Ihrer Fenster lässt sich veredeln: mit Aluminiumvorsatzschalen von aluplast. Die Kombination vereint die herausragenden Wärmedämmeigenschaften des Kunststofffensters mit dem modernen Look von Aluminium. Eine Beschichtung der Aluminiumvorsatzschalen in allen RAL-Farben ist möglich.',
         aluImage: 'pvc-alu_klein.jpg',
-        aluPdfUrl: 'docs/Flyer_IDEAL5000.pdf',
         body4: 'Durch speziell entwickelte Mehrkammerprofile werden bei Kunststofffenstern hervorragende thermische und Schallschutzwerte erreicht. Diese schaffen ideale Voraussetzungen für ein behagliches Raumklima und niedrige Heizkosten.',
         bannerAlu: 'Banner_Alu_Kunststoff_900.png',
       },
@@ -116,7 +116,7 @@ const LUXBELL_CONTENT = {
         lead: 'Die Visitenkarte Ihres Hauses.',
         sub: 'Türen mit ansprechendem Design und modernster Technik.',
         downloads: [
-          { label: 'Haustürenkatalog – Download', url: 'docs/Haustuerenkatalog.pdf' },
+          { label: 'Katalog Alutüren und Zubehör – Download', url: 'docs/Katalog_Alutueren_und_Zubehoer.pdf' },
         ],
       },
 
@@ -144,7 +144,7 @@ const LUXBELL_CONTENT = {
       'ueber-uns': {
         title: 'Über Uns',
         bannerImage: 'Bau-Banner.png',
-        body: 'Die Firma Luxbell Bauelemente Handels GmbH besteht seit 2002 und unser Schwerpunkt liegt im Objektgeschäft von Fenstern und Türen, das wir mit Baufirmen, Genossenschaften und - oder Architekten abwickeln. Technisches Know-how, ein solides Preis-Leistungsgefüge sowie rasche Durchführungszeiten lassen uns als Partner für den Ausführenden am Bau interessant sein.',
+        body: 'Die Firma LUXBELL Fenster und Türen Handels GmbH besteht seit 2026 und unser Schwerpunkt liegt im Objektgeschäft von Fenstern und Türen, das wir mit Baufirmen, Genossenschaften und - oder Architekten abwickeln. Technisches Know-how, ein solides Preis-Leistungsgefüge sowie rasche Durchführungszeiten lassen uns als Partner für den Ausführenden am Bau interessant sein.',
         body2: 'Wir sind ein Team von "Fensterfreaks" und die meisten von uns sind seit über 30 Jahren in der Fensterbranche tätig. Erfahrung und die Liebe zum Detail ist also mehr als ausreichend vorhanden.',
         cta: 'Sprechen Sie uns einfach unverbindlich mit Ihrem Anliegen an.',
         footer: 'Seit Jahren sind wir mit akribischer Genauigkeit, technischem Feingefühl und jeder Menge Erfahrung in der Fenster und Türen Branche tätig - und das mit Freude und Motivation.',
@@ -166,8 +166,9 @@ const LUXBELL_CONTENT = {
 
     impressum: {
       title: 'Impressum',
-      companyFull: 'Luxbell Bauelemente Handels GmbH',
-      wkoLink: 'https://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=c700d5fe-99e5-43b3-845e-33ee6578b696',
+      companyFull: 'LUXBELL Fenster und Türen Handels GmbH',
+      // WKO link of the old company removed; add the new firmen.wko.at link once available
+      wkoLink: '',
       wkoLabel: 'WKO Eintrag',
     },
 
@@ -179,21 +180,23 @@ const LUXBELL_CONTENT = {
   en: {
     siteTitle: 'LUXbell - Windows - Doors - Sun Protection',
     companyName: 'LUXbell',
-    companySubtitle: 'Bauelemente Handels GmbH',
+    companySubtitle: 'Fenster und Türen Handels GmbH',
 
     contact: {
       phone: '+43 676 88 58 38 88',
-      address: 'Prießnitzgasse 6/1/3',
-      postalCode: '2340',
-      city: 'Mödling',
+      address: 'Feldgasse 46',
+      postalCode: '3130',
+      city: 'Herzogenburg',
       email: 'office@luxbell.at',
+      web: 'www.luxbell-fenster.at',
     },
 
     legal: {
-      tradeRegister: 'Company register: 245939a',
-      vatId: 'VAT ID: ATU57764501',
-      gisa: 'GISA: 10118207',
-      authority: 'Bezirkshauptmannschaft Mödling',
+      tradeRegister: 'Company register: FN 674264',
+      vatId: 'VAT ID: ATU83068543',
+      gisa: 'GISA: 39419538',
+      taxNumber: 'Tax number: 29 247/1732',
+      authority: 'Bezirkshauptmannschaft St. Pölten',
     },
 
     nav: [
@@ -246,28 +249,25 @@ const LUXBELL_CONTENT = {
         body: 'PVC windows offer an attractive modern design, high-quality manufacturing technology and excellent thermal performance.',
         products: [
           {
-            name: 'Aluplast IDEAL 5000',
-            image: 'IDEAL5000_Fenster_quadratisch.jpg',
-            pdfUrl: 'docs/Flyer_IDEAL5000.pdf',
+            name: 'Aluplast IDEAL NEO',
+            image: 'IDEAL_NEO_Fenster.jpg',
             features: [
-              'Uf value 1.2 W/m²K',
+              '76 mm frame depth',
               'Central sealing system with three sealing planes for improved burglar resistance',
-              'Glazing thickness up to 41 mm',
-              'Design variety (Classic-line fv | Classic-line hfv | Soft-line hfv | Round-line hfv)',
-              'RC2 (WK2): certified burglar resistance',
+              'Glazing beads – Qube-line',
+              'Sash glazing thickness up to 53 mm',
+              'RC2 certified burglar resistance possible',
               'Concealed drainage possible',
-              'Excellent sound insulation up to class IV',
-              'Available in many decor variants',
-              'Aluminium cladding aluskin® available',
             ],
-          }
-
+          },
+          {
+            name: 'Aluplast IDEAL 8000',
+            image: 'IDEAL8000_Fenster_quadratisch.jpg',
+          },
         ],
         body2: 'The durable PVC profiles offer long-term resistance to weather and guarantee reliability and peace of mind for many years. Products at the highest technical level.',
-        images: ['8000.jpg', '5000.jpg'],
         body3: 'Smart technology – elegant design: The look of aluminium is very much on trend. Your windows can be upgraded too with aluplast aluminium cladding. The combination brings together the outstanding thermal performance of PVC windows with a modern aluminium look. Coating of the aluminium cladding in all RAL colours is possible.',
         aluImage: 'pvc-alu_klein.jpg',
-        aluPdfUrl: 'docs/Flyer_IDEAL5000.pdf',
         body4: 'Specially developed multi-chamber profiles give PVC windows excellent thermal and sound insulation values, creating ideal conditions for a comfortable indoor climate and lower heating costs.',
         bannerAlu: 'Banner_Alu_Kunststoff_900.png',
       },
@@ -290,7 +290,7 @@ const LUXBELL_CONTENT = {
         lead: 'The calling card of your house.',
         sub: 'Doors with appealing design and modern technology.',
         downloads: [
-          { label: 'Entrance door catalogue – Download', url: 'docs/Haustuerenkatalog.pdf' },
+          { label: 'Aluminium doors and accessories catalogue – Download', url: 'docs/Katalog_Alutueren_und_Zubehoer.pdf' },
         ],
       },
 
@@ -318,7 +318,7 @@ const LUXBELL_CONTENT = {
       'ueber-uns': {
         title: 'About Us',
         bannerImage: 'Bau-Banner.png',
-        body: 'Luxbell Bauelemente Handels GmbH has been in business since 2002. We focus on the project business for windows and doors with construction firms, housing cooperatives and architects. Technical expertise, solid value for money and short lead times make us an attractive partner on site.',
+        body: 'LUXBELL Fenster und Türen Handels GmbH has been in business since 2026. We focus on the project business for windows and doors with construction firms, housing cooperatives and architects. Technical expertise, solid value for money and short lead times make us an attractive partner on site.',
         body2: 'We are a team of “window enthusiasts”; most of us have been in the window industry for over 30 years. So there is no shortage of experience and attention to detail.',
         cta: 'Feel free to contact us with your requirements.',
         footer: 'For years we have been working in the windows and doors industry with precision, technical sensitivity and extensive experience – with enthusiasm and motivation.',
@@ -340,8 +340,9 @@ const LUXBELL_CONTENT = {
 
     impressum: {
       title: 'Imprint',
-      companyFull: 'Luxbell Bauelemente Handels GmbH',
-      wkoLink: 'https://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=c700d5fe-99e5-43b3-845e-33ee6578b696',
+      companyFull: 'LUXBELL Fenster und Türen Handels GmbH',
+      // WKO link of the old company removed; add the new firmen.wko.at link once available
+      wkoLink: '',
       wkoLabel: 'WKO entry',
     },
 

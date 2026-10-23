@@ -40,6 +40,10 @@
     );
   }
 
+  function legalIds(l) {
+    return [l.tradeRegister, l.vatId, l.gisa, l.taxNumber].filter(Boolean).join(' | ');
+  }
+
   function renderLegalFooter(CONTENT) {
     var l = CONTENT.legal;
     if (!l) return '';
@@ -47,7 +51,7 @@
     return (
       '<div class="legal-footer">' +
       '<p>' + footerText + '</p>' +
-      '<p>' + (l.tradeRegister || '') + ' | ' + (l.vatId || '') + ' | ' + (l.gisa || '') + '</p>' +
+      '<p>' + legalIds(l) + '</p>' +
       '<p>' + (l.authority || '') + '</p>' +
       '</div>'
     );
@@ -68,11 +72,11 @@
         '<div class="impressum-block">' +
         '<p><strong>' + (imp.companyFull || CONTENT.companyName) + '</strong></p>' +
         '<p>' + (CONTENT.contact ? CONTENT.contact.address + '<br>' + CONTENT.contact.postalCode + ' ' + CONTENT.contact.city : '') + '</p>' +
-        '<p>Tel. ' + (CONTENT.contact ? CONTENT.contact.phone : '') + '<br>Web: www.luxbell.at<br>Mail: ' + (CONTENT.contact ? CONTENT.contact.email : '') + '</p>' +
+        '<p>Tel. ' + (CONTENT.contact ? CONTENT.contact.phone : '') + '<br>Web: ' + (CONTENT.contact ? CONTENT.contact.web : '') + '<br>Mail: ' + (CONTENT.contact ? CONTENT.contact.email : '') + '</p>' +
         (imp.wkoLink ? '<p><a href="' + imp.wkoLink + '" target="_blank" rel="noopener">' + (imp.wkoLabel || 'WKO Eintrag') + '</a></p>' : '') +
         '</div>' +
         '<div class="impressum-block">' +
-        '<p>' + (legal.tradeRegister || '') + '<br>' + (legal.vatId || '') + '<br>' + (legal.gisa || '') + '<br><br>' + (legal.authority || '') + '</p>' +
+        '<p>' + [legal.tradeRegister, legal.vatId, legal.gisa, legal.taxNumber].filter(Boolean).join('<br>') + '<br><br>' + (legal.authority || '') + '</p>' +
         '</div>' +
         '<p class="content-body"><small>Datenschutz: Bitte bei Bedarf eine eigene Datenschutzerklärung ergänzen (z.B. von einem Generator).</small></p>' +
         '</div>'
@@ -112,27 +116,20 @@
     if (page.body) {
       html += '<div class="content-body"><p>' + page.body + '</p></div>';
     }
+    // Products use the same image + text flow as the Holz / Holz-Alu pages
     if (page.products && page.products.length) {
-      html += '<div class="product-cards">';
       page.products.forEach(function (prod) {
-        html += '<div class="product-card">';
-        html += '<a href="' + (prod.pdfUrl || '#') + '" target="_blank" rel="noopener" class="product-card-link">';
-        html += '<img class="product-card-image" src="' + IMG_PATH + (prod.image || '') + '" alt="' + (prod.name || '') + '" loading="lazy"/>';
-        html += '</a>';
-        html += '<h3 class="product-card-title">' + (prod.name || '') + '</h3>';
-        if (prod.pdfUrl) {
-          html += '<p class="product-card-dl"><a href="' + prod.pdfUrl + '" target="_blank" rel="noopener">Info / Flyer</a></p>';
+        html += '<h2 class="product-title">' + (prod.name || '') + '</h2>';
+        if (prod.image) {
+          html += '<img class="product-image" src="' + IMG_PATH + prod.image + '" alt="' + (prod.name || '') + '" loading="lazy"/>';
         }
         if (prod.features && prod.features.length) {
-          html += '<ul class="product-card-features">';
-          prod.features.forEach(function (f) {
-            html += '<li>' + f + '</li>';
-          });
-          html += '</ul>';
+          html += '<ul class="content-body product-features"><li>' + prod.features.join('</li><li>') + '</li></ul>';
         }
-        html += '</div>';
+        if (prod.pdfUrl) {
+          html += '<p class="content-body text-center"><a href="' + prod.pdfUrl + '" target="_blank" rel="noopener">Info / Flyer</a></p>';
+        }
       });
-      html += '</div>';
     }
     if (page.productImage) {
       html += '<img class="product-image" src="' + IMG_PATH + page.productImage + '" alt="" loading="lazy"/>';
@@ -155,8 +152,11 @@
       html += '<div class="content-body"><p>' + page.body4 + '</p></div>';
     }
     if (page.aluImage) {
-      var aluUrl = page.aluPdfUrl || '#';
-      html += '<div class="content-body"><a href="' + aluUrl + '" target="_blank" rel="noopener"><img class="product-image" src="' + IMG_PATH + page.aluImage + '" alt="PVC Alu" loading="lazy"/></a></div>';
+      var aluImg = '<img class="product-image" src="' + IMG_PATH + page.aluImage + '" alt="PVC Alu" loading="lazy"/>';
+      if (page.aluPdfUrl) {
+        aluImg = '<a href="' + page.aluPdfUrl + '" target="_blank" rel="noopener">' + aluImg + '</a>';
+      }
+      html += '<div class="content-body">' + aluImg + '</div>';
     }
     if (page.bannerAlu) {
       html += '<img class="hero-image" src="' + IMG_PATH + page.bannerAlu + '" alt="" loading="lazy"/>';
@@ -230,7 +230,7 @@
       html += renderLegalFooter(CONTENT);
     }
     if (pageId === 'kontakt') {
-      html += '<div class="legal-footer"><p>' + (legal.tradeRegister || '') + ' | ' + (legal.vatId || '') + ' | ' + (legal.gisa || '') + '</p><p>' + (legal.authority || '') + '</p></div>';
+      html += '<div class="legal-footer"><p>' + legalIds(legal) + '</p><p>' + (legal.authority || '') + '</p></div>';
     }
 
     html += '</div>';

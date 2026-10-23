@@ -1,0 +1,9 @@
+# Production robots.txt — applies when the site is served from the web root.
+# The /v2/ preview on Cloud Run is additionally blocked by an
+# "X-Robots-Tag: noindex" response header set in the parent nginx.conf.
+
+User-agent: *
+Allow: /
+
+# Update the host before going live.
+Sitemap: https://www.luxbell.at/sitemap.xml

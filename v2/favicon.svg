@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LUXbell">
+  <rect width="64" height="64" rx="14" fill="#363D4C"/>
+  <g fill="none" stroke="#D4BE8D" stroke-width="4" stroke-linecap="round">
+    <rect x="16" y="14" width="32" height="36" rx="3"/>
+    <path d="M32 14v36M16 32h32"/>
+  </g>
+</svg>

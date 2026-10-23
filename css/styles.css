@@ -291,6 +291,24 @@ body {
   min-width: 0;
   padding: var(--space-5);
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Branding watermark: faint logo in the top-right corner of every page */
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-5);
+  width: clamp(140px, 30%, 300px);
+  aspect-ratio: 1807 / 734;
+  background: url('../images/luxbell_logo.svg') no-repeat center / contain;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.main-content > * {
+  position: relative;
 }
 
 @media (min-width: 900px) {
@@ -438,69 +456,24 @@ body {
   box-shadow: var(--shadow);
 }
 
-/* Product cards (e.g. Kunststoff IDEAL 5000/8000) */
-.product-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
-  margin: var(--space-5) 0;
-}
-
-.product-card {
-  padding: var(--space-4);
-  background: var(--color-bg-light);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  transition: box-shadow var(--transition);
-}
-
-.product-card:hover {
-  box-shadow: var(--shadow-hover);
-}
-
-.product-card-link {
-  display: block;
-  margin-bottom: var(--space-3);
-}
-
-.product-card-image {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  display: block;
-}
-
-.product-card-title {
-  font-size: clamp(1rem, 0.9375rem + 0.25vw, 1.125rem);
+/* Product sections (Kunststoff) – same image + text flow as Holz / Holz-Alu */
+.product-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.35rem);
   color: var(--color-dark);
-  margin: 0 0 var(--space-2);
-  font-weight: 700;
-}
-
-.product-card-dl {
-  margin: 0 0 var(--space-3);
-  font-size: 0.9375rem;
-}
-
-.product-card-dl a {
-  color: var(--color-accent);
   font-weight: 600;
-  text-decoration: none;
+  text-align: center;
+  margin: var(--space-6) 0 0;
 }
 
-.product-card-dl a:hover {
-  text-decoration: underline;
-}
-
-.product-card-features {
-  margin: 0;
+.product-features {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 1.25rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--color-text);
 }
 
-.product-card-features li {
+.product-features li {
   margin-bottom: var(--space-1);
 }
 

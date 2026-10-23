@@ -1,0 +1,124 @@
+/* Contact cards, legal strip and imprint ----------------------------------- */
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-full);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.contact-card__label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.contact-card__value {
+  font-size: var(--fs-md);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-decoration: none;
+}
+
+a.contact-card__value:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+/* Legal strip -------------------------------------------------------------- */
+
+.legal-strip__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.legal-strip__entry dt {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.legal-strip__entry dd {
+  margin: 0;
+  font-size: var(--fs-base);
+  color: var(--text-heading);
+}
+
+/* Imprint ------------------------------------------------------------------ */
+
+.imprint__section + .imprint__section {
+  margin-top: var(--space-8);
+}
+
+.imprint__section h2 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.imprint__section p + p {
+  margin-top: var(--space-4);
+}
+
+.imprint__company {
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.imprint__external {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.imprint__external:hover {
+  text-decoration: underline;
+}
+
+.imprint__note {
+  padding: var(--space-4);
+  background: var(--bg-sand);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}

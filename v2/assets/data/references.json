@@ -1,0 +1,260 @@
+[
+    {
+        "auftraggeber": "Swietelsky Bau GesmbH",
+        "bauvorhaben": "1210 Wien\nAm Bisamberg 77-79",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Kunststofffenster mit Aluschale"
+    },
+    {
+        "auftraggeber": "Bmst. Dipl. Ing. (FH) Holger Eichberger GmbH",
+        "bauvorhaben": "1100 Wien,\nArthaberplatz 1/ Davidgasse 25",
+        "ausfuehrungsart": "Sockelsanierung u. Dachgeschoßausbau",
+        "beschreibung": "Fenster und Fenstertüren aus Holz"
+    },
+    {
+        "auftraggeber": "ADS - Büro für Architektur, Design u. Projektentwicklung DI Hermann Karrer",
+        "bauvorhaben": "1100 Wien,\nArthaberplatz 8",
+        "ausfuehrungsart": "Sockelsanierung",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Alu"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1220 Wien,\nAttemsgasse 23",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Alu"
+    },
+    {
+        "auftraggeber": "Swietelsky Bau GesmbH",
+        "bauvorhaben": "1130 Wien,\nBraunschweiggasse 28",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff/Alu"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1210 Wien,\nBüchnergasse 4",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Alu"
+    },
+    {
+        "auftraggeber": "BHBaumanagement & Bauberatung GmbH",
+        "bauvorhaben": "1060 Wien,\nEsterhazygasse 6",
+        "ausfuehrungsart": "",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "Zinnrot Fassade & Malerei GmbH",
+        "bauvorhaben": "1120 Wien,\nGatterholzgasse 7,",
+        "ausfuehrungsart": "Fenstertausch",
+        "beschreibung": "Kunststofffenster"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1220 Wien,\nGross-Enzersdorfer-Straße 36",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff/Alu"
+    },
+    {
+        "auftraggeber": "Gemein. Siedlungs-Genossenschaft Altmannsdorf und Hetzendorf reg.Gen.m.H",
+        "bauvorhaben": "1120 Wien,\nKarl Löwe-Gasse 32-34",
+        "ausfuehrungsart": "Fassadensanierung – Fenstertausch",
+        "beschreibung": "Kunststofffenster"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1140 Wien,\nKuefsteingasse 30-34",
+        "ausfuehrungsart": "",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff/Alu"
+    },
+    {
+        "auftraggeber": "Porr Bau GmbH",
+        "bauvorhaben": "1040 Wien,\nArgentinierstraße 16",
+        "ausfuehrungsart": "Sanierung",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1120 Wien,\nAuhofstraße 181",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Aluminium"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1120 Wien,\nDunklergasse 17",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Aluminium"
+    },
+    {
+        "auftraggeber": "Ing. Helmut Horak",
+        "bauvorhaben": "1220 Wien,\nWolfgang-Mühlwanger-Str. Hänischgasse/Teiläckerg",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Holz und Alufenster, Türen aus Aluminium, Kunststoff Fenster"
+    },
+    {
+        "auftraggeber": "Lavaro Bau GmbH",
+        "bauvorhaben": "1020 Wien,\nHeinestraße 8",
+        "ausfuehrungsart": "Sockelsanierung u. DG-Ausausbau",
+        "beschreibung": "Fenster und Fenstertüren aus HOLZ/ALU"
+    },
+    {
+        "auftraggeber": "Arch. Dipl. –Ing. Wolf Klerings",
+        "bauvorhaben": "1210 Wien,\nIrenäusgasse 9",
+        "ausfuehrungsart": "Thewosan",
+        "beschreibung": "Fenster und Fenstertüren aus HOLZ/ALU"
+    },
+    {
+        "auftraggeber": "Hazet Bauunternehmung GmbH",
+        "bauvorhaben": "1190 Wien,\nPeter Jordan-Straße 82\nUniversität für Bodenkultur",
+        "ausfuehrungsart": "Dachausbau",
+        "beschreibung": "Fenster aus Kunststoff-Alu, Aluminium Eingangstüre"
+    },
+    {
+        "auftraggeber": "Swietelsky Bau GmbH. Zweigniederlassung Hochbau Ost",
+        "bauvorhaben": "1230 Wien,\nPuccinigasse 4",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Aluportale"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1190 Wien,\nWeinberggasse",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Aluminium"
+    },
+    {
+        "auftraggeber": "Arch. Dipl. Ing. A. Gattermann",
+        "bauvorhaben": "3200 Ober-Grafendorf,\nRudolf Krippl Platz,",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff, Aluminium Eingangstüren, Sonnenschutz"
+    },
+    {
+        "auftraggeber": "Swietelsky Bau GesmbH Hochbau Ost Trumau",
+        "bauvorhaben": "2514 Traiskirchen,\nSchwechatstraße 30+32",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "Wien-Süd Gemeinnützige Bau- u. Wohnungsgen.",
+        "bauvorhaben": "4240 Freistadt,\nKlostergasse 21",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "Dipl. Ing. Norbert Schmiedehausen Zivilingenieur für Bauwesen",
+        "bauvorhaben": "1080 Wien,\nFlorianigasse 31",
+        "ausfuehrungsart": "Sockelsanierung und Dachgeschossausbau",
+        "beschreibung": "Fenster und Fenstertüren aus HOLZ/ALU"
+    },
+    {
+        "auftraggeber": "Proportion.at zt-GmbH",
+        "bauvorhaben": "1170 Wien,\nHernalser Hauptstr.83",
+        "ausfuehrungsart": "Sanierung eines Wohngebäudes mit Aufstockung, DG- und Hofzubau",
+        "beschreibung": "Fenster und Fenstertüren aus HOLZ/ALU"
+    },
+    {
+        "auftraggeber": "Hazet Bauunternehmung GmbH",
+        "bauvorhaben": "1140 Wien,\nHochsatzengasse 32",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff-Alu"
+    },
+    {
+        "auftraggeber": "G.&M. Maier Bauunternehmung GesmbH",
+        "bauvorhaben": "1150 Wien,\nHüteldorferstraße 109",
+        "ausfuehrungsart": "Dachausbau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff Aluminium Eingangstüren, Sonnenschutz"
+    },
+    {
+        "auftraggeber": "M&R GU GmbH",
+        "bauvorhaben": "1230 Wien,\nLamezanstraße 9",
+        "ausfuehrungsart": "Industriebau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff/Alu Aluminium Eingangstüren"
+    },
+    {
+        "auftraggeber": "Archiport Ziviltechniker KG",
+        "bauvorhaben": "1060 Wien,\nLuftbadgasse 13",
+        "ausfuehrungsart": "Dachausbau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "DI Manfred Hanke",
+        "bauvorhaben": "1100 Wien,\nRechberggasse 3",
+        "ausfuehrungsart": "Wohnhaussanierung, hausseitige Sanierung, Dachgeschossausbau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff Aluminium Eingangstüren"
+    },
+    {
+        "auftraggeber": "Hazet Bauunternehmung GmbH",
+        "bauvorhaben": "1140 Wien,\nSchützplatz 5",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "BauKult Sanierungsmanagement",
+        "bauvorhaben": "SÖ 35,\nSchöffelgasse 35,\nFamilie Feichtinger",
+        "ausfuehrungsart": "Neubau + Sanierung",
+        "beschreibung": "Fenster und Fenstertüren aus HOLZ/ALU"
+    },
+    {
+        "auftraggeber": "Karl Seidl Bau",
+        "bauvorhaben": "2345 Brunn am Gebirge,\nHeinrich Bablik-Str.2",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "Archiport Ziviltechniker KG",
+        "bauvorhaben": "2380 Perchtoldsdorf,\nAlfred-Merz-Gasse 55-61",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff und Sonnenschutz"
+    },
+    {
+        "auftraggeber": "BM Lindner",
+        "bauvorhaben": "1190 Wien,\nBleichergasse 4",
+        "ausfuehrungsart": "Dachgeschoßausbau",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Alu"
+    },
+    {
+        "auftraggeber": "WEVIG / Arch. Hiegetsberger",
+        "bauvorhaben": "1170 Wien,\nGeblergasse 67",
+        "ausfuehrungsart": "Thewosan Sanierung",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Alu und Aluminiumtüren"
+    },
+    {
+        "auftraggeber": "Swietelsky Baugesellschaft m.b.H.",
+        "bauvorhaben": "1220 Wien,\nGodlewskigasse 22",
+        "ausfuehrungsart": "Sonnenschutz",
+        "beschreibung": "Außenraffstore und Innenjalousien"
+    },
+    {
+        "auftraggeber": "Profea Projektmanagement GmbH.",
+        "bauvorhaben": "1140 Wien,\nHüteldorferstraße 128",
+        "ausfuehrungsart": "Dachgeschoßausbau, Sonnenschutz",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Alu, Aluminiumtüren und Außenraffstore"
+    },
+    {
+        "auftraggeber": "Mag. Arch. Gründler",
+        "bauvorhaben": "1030 Wien,\nKhunngasse 21",
+        "ausfuehrungsart": "Dachgeschoßzubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "Gemeinn. Bau- u. Siedlungsgen. Pielachtal",
+        "bauvorhaben": "3200 Weinburg,\nDr. Tschadekstraße 2",
+        "ausfuehrungsart": "Sanierung, Sonnenschutz",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff und Außenjalousien"
+    },
+    {
+        "auftraggeber": "G&M Maier Bauunternehmung",
+        "bauvorhaben": "1210 Wien,\nPeter-Berner-Straße 9",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Holz/Aluminium, Schalldämmlüfter"
+    },
+    {
+        "auftraggeber": "Siedlungsgen. Rottenmann",
+        "bauvorhaben": "8020 Graz\nWienerstraße 95a",
+        "ausfuehrungsart": "Neubau",
+        "beschreibung": "Fenster und Fenstertüren aus Kunststoff"
+    },
+    {
+        "auftraggeber": "ASFINAG",
+        "bauvorhaben": "2165 Drasenhofen",
+        "ausfuehrungsart": "Schallschutzfenster",
+        "beschreibung": "Fenster aus Kunststoff/Aluminium"
+    }
+]

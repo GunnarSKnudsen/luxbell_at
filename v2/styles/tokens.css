@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Design tokens — the single source of truth for the visual system.
+   Change a value here and it propagates everywhere. Nothing else in the
+   stylesheet may hard-code a colour, radius, shadow or duration.
+
+   The three brand colours are carried over unchanged from the original site:
+     sand 300  #C9C2B3   page background
+     gold 500  #D4BE8D   accent / links
+     ink  800  #363D4C   navigation, headings
+   The remaining steps are tints and shades derived from those three, so the
+   palette reads as the same brand with more room to breathe.
+   ========================================================================== */
+
+:root {
+  /* --- Palette ---------------------------------------------------------- */
+  --c-sand-50:  #FAF8F4;
+  --c-sand-100: #F3EFE7;
+  --c-sand-200: #E6E0D3;
+  --c-sand-300: #C9C2B3;  /* brand */
+  --c-sand-400: #ADA593;
+
+  --c-gold-300: #EDE0C4;
+  --c-gold-400: #E0CDA3;
+  --c-gold-500: #D4BE8D;  /* brand */
+  --c-gold-600: #BCA06A;
+  --c-gold-700: #9B8150;
+
+  --c-ink-900:  #1C1F27;
+  --c-ink-800:  #363D4C;  /* brand */
+  --c-ink-700:  #4A5264;
+  --c-ink-600:  #616A7E;
+  --c-ink-400:  #8C93A3;
+  --c-ink-200:  #C5C9D2;
+
+  --c-white:    #FFFFFF;
+
+  /* --- Semantic roles --------------------------------------------------- */
+  --bg:            var(--c-white);
+  --bg-alt:        var(--c-sand-50);
+  --bg-sand:       var(--c-sand-100);
+  --bg-inverse:    var(--c-ink-800);
+  --surface:       var(--c-white);
+  --surface-alt:   var(--c-sand-50);
+
+  --text:          var(--c-ink-900);
+  --text-muted:    var(--c-ink-600);
+  --text-faint:    var(--c-ink-400);
+  --text-inverse:  var(--c-white);
+  --text-heading:  var(--c-ink-800);
+
+  --accent:        var(--c-gold-500);
+  --accent-strong: var(--c-gold-700);
+  --accent-soft:   var(--c-gold-300);
+
+  --border:        var(--c-sand-200);
+  --border-strong: var(--c-sand-300);
+  --ring:          var(--c-gold-700);
+
+  --scrim: linear-gradient(
+    180deg,
+    rgb(28 31 39 / 0.62) 0%,
+    rgb(28 31 39 / 0.42) 45%,
+    rgb(28 31 39 / 0.72) 100%
+  );
+
+  /* --- Typography ------------------------------------------------------- */
+  --font-body: 'Corbert', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-display: 'Corbert', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  --fs-xs:   0.8125rem;                                   /* 13px */
+  --fs-sm:   0.875rem;                                    /* 14px */
+  --fs-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
+  --fs-md:   clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --fs-lg:   clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
+  --fs-xl:   clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --fs-2xl:  clamp(1.625rem, 1.35rem + 1.3vw, 2.25rem);
+  --fs-3xl:  clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+  --fs-4xl:  clamp(2.25rem, 1.6rem + 3vw, 4rem);
+
+  --lh-tight: 1.15;
+  --lh-snug:  1.35;
+  --lh-base:  1.65;
+
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.16em;
+
+  /* --- Spacing (4px base) ----------------------------------------------- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-7:  2.5rem;
+  --space-8:  3rem;
+  --space-9:  4rem;
+  --space-10: 5rem;
+  --space-11: 6rem;
+  --space-12: 8rem;
+
+  /* Vertical rhythm between page sections, fluid across viewports. */
+  --section-y: clamp(3rem, 1.5rem + 6vw, 6rem);
+
+  /* --- Layout ----------------------------------------------------------- */
+  --container:        1180px;
+  --container-narrow: 760px;
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --header-h: 72px;
+
+  /* --- Radii ------------------------------------------------------------ */
+  --r-sm:   6px;
+  --r-md:   10px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-full: 999px;
+
+  /* --- Elevation -------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgb(28 31 39 / 0.06), 0 1px 3px rgb(28 31 39 / 0.08);
+  --shadow-md: 0 4px 12px rgb(28 31 39 / 0.07), 0 2px 4px rgb(28 31 39 / 0.05);
+  --shadow-lg: 0 12px 32px rgb(28 31 39 / 0.10), 0 4px 8px rgb(28 31 39 / 0.05);
+  --shadow-xl: 0 24px 56px rgb(28 31 39 / 0.14), 0 8px 16px rgb(28 31 39 / 0.06);
+
+  /* --- Motion ----------------------------------------------------------- */
+  --dur-fast: 140ms;
+  --dur:      240ms;
+  --dur-slow: 520ms;
+  --ease:     cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* --- Stacking --------------------------------------------------------- */
+  --z-header: 100;
+  --z-drawer: 200;
+  --z-skip:   300;
+}

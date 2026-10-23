@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Typography — the Corbert webfont from the original site, plus the base
+   type rules. Component-specific text sizing lives with the component.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Corbert';
+  src: url('../assets/fonts/corbert-regular.woff') format('woff'),
+       url('../assets/fonts/corbert-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Corbert';
+  src: url('../assets/fonts/corbert-italic.woff') format('woff'),
+       url('../assets/fonts/corbert-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--text-heading);
+  line-height: var(--lh-tight);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-3xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-lg); }
+h4 { font-size: var(--fs-md); }
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color var(--dur-fast) var(--ease);
+}
+
+a:hover {
+  color: var(--text-heading);
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* A small uppercase label used above headings throughout the site. */
+.kicker {
+  display: block;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: var(--space-3);
+}
+
+.kicker--on-dark {
+  color: var(--c-gold-400);
+}
+
+/* Section heading with a short gold rule underneath. */
+.section-title {
+  position: relative;
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  border-radius: var(--r-full);
+  background: var(--accent);
+}
+
+.section-title--center {
+  text-align: center;
+}
+
+.section-title--center::after {
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+}
+
+/* Consistent focus ring for every interactive element. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}

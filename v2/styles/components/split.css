@@ -1,0 +1,65 @@
+/* Split block — image beside text ------------------------------------------ */
+
+.split {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4.5rem);
+  }
+
+  /* `side: 'left'` puts the image in the first column; the default is second. */
+  .split__media {
+    order: 2;
+  }
+
+  .split__body {
+    order: 1;
+  }
+
+  .split--media-first .split__media {
+    order: 1;
+  }
+
+  .split--media-first .split__body {
+    order: 2;
+  }
+}
+
+.split__media img {
+  width: 100%;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  background: var(--surface);
+}
+
+.split__media-link {
+  display: block;
+  border-radius: var(--r-lg);
+  transition: transform var(--dur) var(--ease);
+}
+
+.split__media-link:hover {
+  transform: translateY(-3px);
+}
+
+.split__body {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+}
+
+.split__body p + p {
+  margin-top: var(--space-4);
+}
+
+.split__body .section-title {
+  margin-bottom: var(--space-5);
+}
+
+.section--inverse .split__body {
+  color: var(--c-sand-200);
+}

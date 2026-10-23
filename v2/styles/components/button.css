@@ -1,0 +1,109 @@
+/* Buttons and button-shaped links ----------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.75em 1.5em;
+  border-radius: var(--r-full);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease),
+    transform var(--dur-fast) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn__icon {
+  flex: none;
+}
+
+/* Solid gold — the primary action. */
+.btn--primary {
+  background: var(--accent);
+  color: var(--c-ink-900);
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--primary:hover {
+  background: var(--c-gold-400);
+  border-color: var(--c-gold-400);
+  color: var(--c-ink-900);
+  box-shadow: var(--shadow-md);
+}
+
+/* Outlined dark — secondary action on light backgrounds. */
+.btn--secondary {
+  background: transparent;
+  color: var(--text-heading);
+  border: 1px solid var(--border-strong);
+}
+
+.btn--secondary:hover {
+  background: var(--bg-sand);
+  border-color: var(--text-heading);
+  color: var(--text-heading);
+}
+
+/* Outlined light — for use on dark backgrounds and over hero imagery. */
+.btn--ghost {
+  background: rgb(255 255 255 / 0.08);
+  color: var(--c-white);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.btn--ghost:hover {
+  background: rgb(255 255 255 / 0.18);
+  border-color: var(--c-white);
+  color: var(--c-white);
+}
+
+/* Text-only — used for the phone number in the header. */
+.btn--quiet {
+  padding: 0.5em 0.75em;
+  background: transparent;
+  color: inherit;
+  border: 1px solid transparent;
+}
+
+.btn--quiet:hover {
+  color: inherit;
+  border-color: currentColor;
+}
+
+/* Rows ------------------------------------------------------------------- */
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.section--inverse .btn--secondary {
+  color: var(--c-white);
+  border-color: rgb(255 255 255 / 0.5);
+}
+
+.section--inverse .btn--secondary:hover {
+  background: rgb(255 255 255 / 0.12);
+  border-color: var(--c-white);
+  color: var(--c-white);
+}

@@ -1,0 +1,128 @@
+/* Site footer -------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--bg-inverse);
+  color: var(--c-sand-200);
+  font-size: var(--fs-sm);
+}
+
+.footer__top {
+  display: grid;
+  gap: var(--space-7);
+  padding-block: var(--space-9) var(--space-7);
+}
+
+@media (min-width: 700px) {
+  .footer__top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer__top {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+.footer__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--c-white);
+}
+
+.footer__tagline {
+  margin-top: var(--space-3);
+  max-width: 42ch;
+  color: var(--c-sand-300);
+}
+
+.footer__heading {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--c-gold-400);
+  margin-bottom: var(--space-4);
+}
+
+.footer__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.footer__list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.footer__list .icon {
+  margin-top: 0.15em;
+  color: var(--c-gold-400);
+}
+
+.footer__list address {
+  font-style: normal;
+}
+
+.footer__list a {
+  color: var(--c-sand-200);
+  text-decoration: none;
+}
+
+.footer__list a:hover {
+  color: var(--c-white);
+  text-decoration: underline;
+}
+
+.footer__list--links li {
+  display: block;
+}
+
+.footer__link {
+  display: block;
+  padding: 0;
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  color: var(--c-sand-200);
+}
+
+.footer__link:hover {
+  background: none;
+  color: var(--c-white);
+  text-decoration: underline;
+}
+
+.footer__link.is-active {
+  color: var(--c-gold-400);
+  font-weight: 700;
+}
+
+/* Bottom bar --------------------------------------------------------------- */
+
+.footer__legal {
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.footer__legal-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-block: var(--space-5);
+  font-size: var(--fs-xs);
+  color: var(--c-ink-200);
+}
+
+.footer__legal-inner a {
+  color: var(--c-gold-400);
+  text-decoration: none;
+}
+
+.footer__legal-inner a:hover {
+  color: var(--c-white);
+  text-decoration: underline;
+}

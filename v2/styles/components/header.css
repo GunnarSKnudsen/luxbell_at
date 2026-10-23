@@ -1,0 +1,259 @@
+/* Site header -------------------------------------------------------------
+   Two states:
+     default          solid, dark text  (every page without a hero, or scrolled)
+     .--overlay       transparent, light text — sits over a hero banner
+   `.is-scrolled` is set by core/reveal.js and always wins back the solid look.
+   ------------------------------------------------------------------------- */
+
+.site-header {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: var(--z-header);
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: rgb(255 255 255 / 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-heading);
+  transition:
+    background-color var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.site-header--overlay:not(.is-scrolled) {
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom-color: transparent;
+  color: var(--c-white);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  width: 100%;
+  /* Wider than the page container: the bar has to fit brand + six nav items +
+     actions on one line, and it is the only thing that does. */
+  max-width: 1360px;
+}
+
+/* Brand -------------------------------------------------------------------- */
+
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-inline-end: auto;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+}
+
+.header__logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: filter var(--dur) var(--ease);
+}
+
+/* The logo is dark artwork; invert it while the header is transparent. */
+.site-header--overlay:not(.is-scrolled) .header__logo {
+  filter: brightness(0) invert(1);
+}
+
+/* The tagline is the first thing to go when the bar runs out of room. It is
+   `nowrap`, so without these guards it would overflow its flex item and paint
+   underneath the navigation instead of being clipped. */
+.header__tagline {
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.75;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1279px) {
+  .header__tagline {
+    display: none;
+  }
+}
+
+/* Navigation bar ----------------------------------------------------------- */
+
+.header__nav {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .header__nav {
+    display: block;
+    /* Never shrink: the brand gives way first. */
+    flex: none;
+  }
+}
+
+.nav-list--bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+
+.nav-link:hover {
+  color: inherit;
+  background: rgb(212 190 141 / 0.22);
+}
+
+.nav-list--bar .nav-link.is-active {
+  color: var(--accent-strong);
+  background: rgb(212 190 141 / 0.2);
+}
+
+.site-header--overlay:not(.is-scrolled) .nav-list--bar .nav-link.is-active {
+  color: var(--c-white);
+  background: rgb(255 255 255 / 0.16);
+}
+
+/* Dropdown ---------------------------------------------------------------- */
+
+.nav-group__chevron {
+  transition: transform var(--dur) var(--ease);
+}
+
+.nav-group.is-open .nav-group__chevron {
+  transform: rotate(180deg);
+}
+
+.nav-list--bar .nav-group__panel {
+  position: absolute;
+  inset-block-start: calc(100% + var(--space-2));
+  inset-inline-start: 0;
+  min-width: 240px;
+  margin: 0;
+  padding: var(--space-2);
+  list-style: none;
+  background: var(--surface);
+  color: var(--text-heading);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    visibility var(--dur) var(--ease);
+}
+
+.nav-list--bar .nav-group.is-open .nav-group__panel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.nav-list--bar .nav-link--child {
+  display: block;
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+.nav-list--bar .nav-link--child.is-active {
+  color: var(--accent-strong);
+  background: var(--bg-sand);
+}
+
+/* Actions ----------------------------------------------------------------- */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: none;
+}
+
+.header__actions .btn--quiet {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .header__actions .btn--quiet {
+    display: inline-flex;
+  }
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+  padding-inline: var(--space-2);
+  border: 1px solid currentColor;
+  border-radius: var(--r-full);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
+}
+
+.lang-toggle:hover {
+  opacity: 1;
+  color: inherit;
+  background: rgb(212 190 141 / 0.22);
+}
+
+.header__burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-md);
+  color: inherit;
+}
+
+.header__burger:hover {
+  background: rgb(212 190 141 / 0.22);
+}
+
+@media (min-width: 1000px) {
+  .header__burger {
+    display: none;
+  }
+}

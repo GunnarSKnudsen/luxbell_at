@@ -5,3 +5,12 @@
 TODO_and_changes.md
 node_modules
 .DS_Store
+
+# v2 carries its own container config for standalone use; the combined image
+# is built from this folder's Dockerfile and nginx.conf instead.
+v2/Dockerfile
+v2/nginx.conf
+v2/docker-compose.yml
+v2/.dockerignore
+v2/*.md
+v2/tools

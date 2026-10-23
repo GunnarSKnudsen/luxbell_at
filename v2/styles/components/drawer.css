@@ -1,0 +1,142 @@
+/* Mobile navigation drawer ------------------------------------------------- */
+
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+}
+
+.drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgb(28 31 39 / 0.5);
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+
+.drawer.is-open .drawer__backdrop {
+  opacity: 1;
+}
+
+.drawer__panel {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: min(380px, 88vw);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  box-shadow: var(--shadow-xl);
+  transform: translateX(100%);
+  transition: transform var(--dur) var(--ease-out);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.drawer.is-open .drawer__panel {
+  transform: none;
+}
+
+.drawer__head {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.drawer__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-md);
+  color: var(--text-heading);
+}
+
+.drawer__close:hover {
+  background: var(--bg-sand);
+}
+
+.drawer__body {
+  flex: 1;
+  padding: var(--space-4) var(--space-5) var(--space-6);
+}
+
+/* Prevent the page behind the drawer from scrolling. */
+body.has-drawer-open {
+  overflow: hidden;
+}
+
+/* Links -------------------------------------------------------------------- */
+
+.nav-list--drawer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+}
+
+.nav-list--drawer .nav-link {
+  display: block;
+  padding: var(--space-3) var(--space-3);
+  font-size: var(--fs-md);
+  color: var(--text-heading);
+}
+
+.nav-list--drawer .nav-link.is-active {
+  color: var(--accent-strong);
+  background: var(--bg-sand);
+}
+
+.nav-group--static {
+  margin-block: var(--space-3);
+  padding-block: var(--space-3);
+  border-block: 1px solid var(--border);
+}
+
+.nav-group__heading {
+  display: block;
+  padding-inline: var(--space-3);
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.nav-list--drawer .nav-group__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list--drawer .nav-link--child {
+  font-size: var(--fs-base);
+  padding-inline-start: var(--space-5);
+}
+
+/* Footer of the drawer ----------------------------------------------------- */
+
+.drawer__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+}
+
+.drawer__footer .btn {
+  flex: 1;
+}
+
+.lang-toggle--drawer {
+  color: var(--text-heading);
+  border-color: var(--border-strong);
+  height: 44px;
+}

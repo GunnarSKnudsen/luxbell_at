@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Update the host below before going live. Keep in sync with ROUTES in src/content/site.js. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.luxbell.at/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/holz-produkte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/holz-produkte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/holz-produkte"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/holz-produkte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/holz-produkte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/holz-produkte"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/holz-alu-produkte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/holz-alu-produkte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/holz-alu-produkte"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/holz-alu-produkte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/holz-alu-produkte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/holz-alu-produkte"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/kunststoff-produkte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/kunststoff-produkte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/kunststoff-produkte"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/kunststoff-produkte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/kunststoff-produkte"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/kunststoff-produkte"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/sonnenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/sonnenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/sonnenschutz"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/sonnenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/sonnenschutz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/sonnenschutz"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/haustueren</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/haustueren"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/haustueren"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/haustueren</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/haustueren"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/haustueren"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/pflege-wartung</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/pflege-wartung"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/pflege-wartung"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/pflege-wartung</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/pflege-wartung"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/pflege-wartung"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/ueber-uns</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/ueber-uns"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/ueber-uns</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/ueber-uns"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/ueber-uns"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/referenzen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/referenzen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/referenzen"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/referenzen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/referenzen"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/referenzen"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/kontakt"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/kontakt"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/impressum"/>
+  </url>
+  <url>
+    <loc>https://www.luxbell.at/en/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.luxbell.at/impressum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.luxbell.at/en/impressum"/>
+  </url>
+</urlset>

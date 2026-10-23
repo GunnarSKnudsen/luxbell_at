@@ -1,0 +1,161 @@
+/* Linked product cards ----------------------------------------------------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-5);
+  margin: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition:
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
+}
+
+/* The whole card is clickable, but only the title is a real link, so screen
+   readers announce one meaningful link name per card. */
+.card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.card__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--bg-sand);
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-out);
+}
+
+.card:hover .card__media img {
+  transform: scale(1.04);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--space-5);
+}
+
+.card__title {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-2);
+}
+
+.card__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card__text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.card__arrow {
+  margin-top: var(--space-4);
+  color: var(--accent-strong);
+  transition: transform var(--dur) var(--ease);
+}
+
+.card:hover .card__arrow {
+  transform: translateX(4px);
+}
+
+/* Feature cards (Sonnenschutz) --------------------------------------------- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: var(--space-5);
+  margin: 0;
+}
+
+.feature {
+  padding: var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  border-top: 3px solid var(--accent);
+  transition: box-shadow var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.feature__title {
+  font-size: var(--fs-base);
+  letter-spacing: var(--tracking-wide);
+  color: var(--accent-strong);
+  margin-bottom: var(--space-3);
+}
+
+.feature__text {
+  font-size: var(--fs-sm);
+}
+
+.feature__sub {
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+/* Stats band --------------------------------------------------------------- */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--space-5);
+  margin: 0;
+  padding: var(--space-6);
+  background: var(--bg-sand);
+  border-radius: var(--r-lg);
+  text-align: center;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stats__value {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: var(--lh-tight);
+}
+
+.stats__label {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.section--sand .stats {
+  background: var(--surface);
+}

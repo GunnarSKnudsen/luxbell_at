@@ -2,6 +2,23 @@
 
 Modernized static website for LUXbell Bauelemente Handels GmbH (Fenster, Türen, Sonnenschutz).
 
+> ### There are two versions in this repository
+>
+> | | Folder | Served at | Docs |
+> |---|---|---|---|
+> | **v1** — the current site | this folder | `/` | this file |
+> | **v2** — the rebuild | [`v2/`](v2/) | `/v2/` | [v2/README.md](v2/README.md) |
+>
+> Both are built into **one** container by the `Dockerfile` here and deployed as a single Cloud Run
+> service, so the client can compare them without a second deployment — see
+> [v2/DEPLOY.md](v2/DEPLOY.md).
+>
+> v2 is a full rebuild: no Python anywhere (not even for local preview), ES modules instead of global
+> scripts, a block-based content model, clean URLs and a redesigned front end on the same brand
+> colours. It is self-contained and shares no code or assets with v1.
+>
+> Everything below describes **v1** and is unchanged.
+
 ## Structure
 
 ```

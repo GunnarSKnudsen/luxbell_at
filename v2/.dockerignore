@@ -1,0 +1,6 @@
+*.md
+.DS_Store
+.dockerignore
+Dockerfile
+docker-compose.yml
+tools/

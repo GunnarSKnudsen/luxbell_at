@@ -1,0 +1,198 @@
+/* References — search controls and the responsive table -------------------- */
+
+.references__controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+@media (min-width: 760px) {
+  .references__controls {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.field__label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.field__control {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field__icon {
+  position: absolute;
+  inset-inline-start: var(--space-4);
+  color: var(--text-faint);
+  pointer-events: none;
+}
+
+.field__icon--end {
+  inset-inline-start: auto;
+  inset-inline-end: var(--space-4);
+}
+
+.field__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-md);
+  font-size: var(--fs-base);
+  color: var(--text);
+  transition: border-color var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+}
+
+.field--search .field__input {
+  padding-inline-start: calc(var(--space-4) * 2 + 20px);
+}
+
+select.field__input {
+  appearance: none;
+  padding-inline-end: calc(var(--space-4) * 2 + 20px);
+  cursor: pointer;
+}
+
+.field__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(212 190 141 / 0.35);
+}
+
+.references__count {
+  margin-bottom: var(--space-4);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.references__empty,
+.references__error {
+  padding: var(--space-6);
+  background: var(--bg-sand);
+  border-radius: var(--r-lg);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* Table (wide screens) ----------------------------------------------------- */
+
+.references__scroll {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+
+.references-table {
+  width: 100%;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-snug);
+}
+
+.references-table th {
+  padding: var(--space-4);
+  background: var(--bg-sand);
+  text-align: start;
+  font-weight: 700;
+  color: var(--text-heading);
+  white-space: nowrap;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.references-table td {
+  padding: var(--space-4);
+  vertical-align: top;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.references-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.references-table tbody tr {
+  transition: background-color var(--dur-fast) var(--ease);
+}
+
+.references-table tbody tr:hover {
+  background: rgb(212 190 141 / 0.1);
+}
+
+.references-table .cell--auftraggeber {
+  font-weight: 700;
+  color: var(--text-heading);
+  min-width: 16ch;
+}
+
+/* Cards (narrow screens) --------------------------------------------------
+   The same markup, re-laid out: each row becomes a card and each cell gets
+   its column name from the `data-label` attribute. This is what removes the
+   horizontal overflow the old site had on phones.
+   ------------------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .references__scroll {
+    border: none;
+    background: none;
+    overflow-x: visible;
+  }
+
+  .references-table,
+  .references-table thead,
+  .references-table tbody,
+  .references-table tr,
+  .references-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .references-table thead {
+    display: none;
+  }
+
+  .references-table tr {
+    margin-bottom: var(--space-4);
+    padding: var(--space-4);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-lg);
+  }
+
+  .references-table td {
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .references-table td:last-child {
+    border-bottom: none;
+  }
+
+  .references-table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: var(--space-1);
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .references-table .cell--auftraggeber {
+    font-size: var(--fs-base);
+  }
+}

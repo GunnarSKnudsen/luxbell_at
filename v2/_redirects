@@ -1,0 +1,5 @@
+# Netlify / Cloudflare Pages SPA fallback.
+# Every path that is not a real file is served by index.html, which then
+# renders the right page client side. Apache and nginx have their own
+# equivalents — see DEPLOY.md.
+/*  /index.html  200
