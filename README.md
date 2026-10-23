@@ -53,12 +53,16 @@ After saving, refresh the browser to see changes.
 
 ## Branding PDFs with the logo
 
-Downloadable PDFs can carry the LUXBELL logo in the top-left corner of every page. The unbranded
-originals live in `docs-src/` (not deployed); the branded copies go to `docs/`:
+All downloadable PDFs carry the LUXBELL logo on every page. The unbranded originals live in
+`docs-src/` (not deployed); the branded copies go to `docs/`. To rebrand everything:
 
 ```bash
-swift tools/brand-pdf.swift branding/luxbell_logo.pdf docs-src/Katalog_Alutueren_und_Zubehoer.pdf docs/Katalog_Alutueren_und_Zubehoer.pdf
+sh tools/brand-all.sh
 ```
+
+Corner, size and per-page overrides (e.g. coloured cover pages) are set per document in
+`tools/brand-all.sh`; the options are listed at the top of `tools/brand-pdf.swift`. To add a new PDF,
+put the original in `docs-src/`, add a `brand` line to `tools/brand-all.sh` and check every page.
 
 Always brand from `docs-src/`, never from `docs/`, or the logo is stamped twice.
 
