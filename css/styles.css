@@ -291,24 +291,6 @@ body {
   min-width: 0;
   padding: var(--space-5);
   overflow-x: hidden;
-  position: relative;
-}
-
-/* Branding watermark: faint logo in the top-right corner of every page */
-.main-content::before {
-  content: '';
-  position: absolute;
-  top: var(--space-4);
-  right: var(--space-5);
-  width: clamp(140px, 30%, 300px);
-  aspect-ratio: 1807 / 734;
-  background: url('../images/luxbell_logo.svg') no-repeat center / contain;
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-.main-content > * {
-  position: relative;
 }
 
 @media (min-width: 900px) {
@@ -593,12 +575,14 @@ body {
   margin: var(--space-1) 0;
 }
 
-.impressum-block a {
+.impressum-block a,
+.content-body a {
   color: var(--color-accent);
   text-decoration: none;
 }
 
-.impressum-block a:hover {
+.impressum-block a:hover,
+.content-body a:hover {
   text-decoration: underline;
 }
 

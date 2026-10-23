@@ -51,6 +51,17 @@ After saving, refresh the browser to see changes.
 1. Put PDF files in a folder, e.g. `docs/`.
 2. In `content/content.js`, under `pages['pflege-wartung'].downloads`, set each `url` to the path, e.g. `url: 'docs/PVC_Pflege_und_Wartungsanleitung.pdf'`.
 
+## Branding PDFs with the logo
+
+Downloadable PDFs can carry the LUXBELL logo in the top-left corner of every page. The unbranded
+originals live in `docs-src/` (not deployed); the branded copies go to `docs/`:
+
+```bash
+swift tools/brand-pdf.swift branding/luxbell_logo.pdf docs-src/Katalog_Alutueren_und_Zubehoer.pdf docs/Katalog_Alutueren_und_Zubehoer.pdf
+```
+
+Always brand from `docs-src/`, never from `docs/`, or the logo is stamped twice.
+
 ## References page
 
 The Referenzen page is filled from **`references.json`** (extracted table data). The app loads **`content/references-data.js`**, which is generated from that JSON. After editing `references.json`, regenerate the data file:

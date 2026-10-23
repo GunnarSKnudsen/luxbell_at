@@ -89,6 +89,16 @@ const LUXBELL_CONTENT = {
           {
             name: 'Aluplast IDEAL 8000',
             image: 'IDEAL8000_Fenster_quadratisch.jpg',
+            features: [
+              '85 mm Bautiefe',
+              'Hoch wärmegedämmtes 6-Kammer-Profilsystem mit RAL-Gütezeichen',
+              'Uf-Wert 1,0 W/m²K',
+              'Mitteldichtungssystem mit drei Dichtebenen',
+              'Verglasungsstärke von 20 bis 51 mm',
+              'Dreifachverglasung bis Ug-Wert 0,6 W/m²K',
+              'Ausführung in Weiß oder Dekor',
+              'Bis zu 97 % recycelbare Materialien',
+            ],
           },
         ],
         body2: 'Die langlebigen Kunststoffprofile zeichnen sich durch langjährige Beständigkeit gegen Witterungsverhältnisse aus und garantieren Ihnen Zuverlässigkeit und Sorgenfreiheit über viele Jahre. Produkte auf höchstem technischen Niveau.',
@@ -167,9 +177,56 @@ const LUXBELL_CONTENT = {
     impressum: {
       title: 'Impressum',
       companyFull: 'LUXBELL Fenster und Türen Handels GmbH',
-      // WKO link of the old company removed; add the new firmen.wko.at link once available
-      wkoLink: '',
+      wkoLink: 'https://firmen.wko.at/luxbell-fenster-und-t%C3%BCren-handels-gmbh/nieder%C3%B6sterreich/?firmaid=b0ec4c80-3695-4468-abab-4c4807aec2b4',
       wkoLabel: 'WKO Eintrag',
+    },
+
+    // Datenschutzerklärung. Contact details of the controller are filled in from `contact` by app.js.
+    datenschutz: {
+      title: 'Datenschutzerklärung',
+      intro: 'Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, DSG, TKG 2021). In dieser Datenschutzerklärung informieren wir Sie über die wichtigsten Aspekte der Datenverarbeitung im Rahmen unserer Website.',
+      controllerTitle: 'Verantwortlicher',
+      sections: [
+        {
+          heading: 'Hosting und Server-Logfiles',
+          paragraphs: [
+            'Diese Website wird bei der Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Deutschland, gehostet. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO; die Server befinden sich in der EU.',
+            'Beim Aufruf der Website werden vom Webserver automatisch technisch notwendige Informationen gespeichert: IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite bzw. Datei, übertragene Datenmenge, Referrer-URL sowie Browsertyp und Betriebssystem. Diese Daten dienen ausschließlich dem sicheren und stabilen Betrieb der Website und werden nicht mit anderen Datenquellen zusammengeführt. Rechtsgrundlage ist unser berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO. Die Logfiles werden nur so lange gespeichert, wie es für diesen Zweck erforderlich ist, und anschließend gelöscht.',
+          ],
+        },
+        {
+          heading: 'Cookies und lokale Speicherung',
+          paragraphs: [
+            'Diese Website verwendet keine Cookies. Wenn Sie die Sprache (Deutsch/Englisch) umschalten, wird Ihre Auswahl im lokalen Speicher Ihres Browsers (Local Storage) abgelegt, damit die Website beim nächsten Besuch in der gewählten Sprache angezeigt wird. Diese Information wird nicht an uns übertragen und kann jederzeit über die Browsereinstellungen gelöscht werden. Die Speicherung ist für die von Ihnen gewünschte Funktion unbedingt erforderlich (§ 165 Abs. 3 TKG 2021).',
+          ],
+        },
+        {
+          heading: 'Keine Analyse- und Tracking-Dienste',
+          paragraphs: [
+            'Wir setzen keine Webanalyse-, Tracking- oder Werbedienste und keine Social-Media-Plugins ein. Schriftarten werden lokal von unserem Server geladen; es werden dabei keine Daten an Dritte übermittelt.',
+          ],
+        },
+        {
+          heading: 'Kontaktaufnahme',
+          paragraphs: [
+            'Wenn Sie uns per E-Mail oder Telefon kontaktieren, verarbeiten wir die von Ihnen übermittelten Daten (z. B. Name, Kontaktdaten, Inhalt Ihrer Anfrage) zur Bearbeitung Ihres Anliegens und für mögliche Anschlussfragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung bzw. Erfüllung eines Vertrags) bzw. unser berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden gelöscht, sobald sie nicht mehr erforderlich sind, sofern keine gesetzlichen Aufbewahrungspflichten (z. B. nach UGB oder BAO) entgegenstehen.',
+          ],
+        },
+        {
+          heading: 'Links zu anderen Websites',
+          paragraphs: [
+            'Unsere Website enthält Links zu externen Websites (z. B. WKO Firmen A-Z). Für die Datenverarbeitung auf diesen Websites ist der jeweilige Betreiber verantwortlich.',
+          ],
+        },
+        {
+          heading: 'Ihre Rechte',
+          paragraphs: [
+            'Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch zu. Wenden Sie sich dazu bitte an die oben angegebenen Kontaktdaten.',
+            'Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der Aufsichtsbehörde beschweren. In Österreich ist dies die Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>.',
+          ],
+        },
+      ],
+      updated: 'Stand: Oktober 2026',
     },
 
     langLabel: 'DE',
@@ -263,6 +320,16 @@ const LUXBELL_CONTENT = {
           {
             name: 'Aluplast IDEAL 8000',
             image: 'IDEAL8000_Fenster_quadratisch.jpg',
+            features: [
+              '85 mm frame depth',
+              'Highly insulated 6-chamber profile system with RAL quality mark',
+              'Uf value 1.0 W/m²K',
+              'Central sealing system with three sealing planes',
+              'Glazing thickness from 20 to 51 mm',
+              'Triple glazing down to Ug 0.6 W/m²K',
+              'Available in white or decor finishes',
+              'Up to 97 % recyclable materials',
+            ],
           },
         ],
         body2: 'The durable PVC profiles offer long-term resistance to weather and guarantee reliability and peace of mind for many years. Products at the highest technical level.',
@@ -341,9 +408,56 @@ const LUXBELL_CONTENT = {
     impressum: {
       title: 'Imprint',
       companyFull: 'LUXBELL Fenster und Türen Handels GmbH',
-      // WKO link of the old company removed; add the new firmen.wko.at link once available
-      wkoLink: '',
+      wkoLink: 'https://firmen.wko.at/luxbell-fenster-und-t%C3%BCren-handels-gmbh/nieder%C3%B6sterreich/?firmaid=b0ec4c80-3695-4468-abab-4c4807aec2b4',
       wkoLabel: 'WKO entry',
+    },
+
+    // Privacy policy. Contact details of the controller are filled in from `contact` by app.js.
+    datenschutz: {
+      title: 'Privacy Policy',
+      intro: 'Protecting your personal data is important to us. We process your data exclusively on the basis of the applicable legal provisions (GDPR, Austrian DSG, TKG 2021). This privacy policy explains the most important aspects of data processing on our website.',
+      controllerTitle: 'Controller',
+      sections: [
+        {
+          heading: 'Hosting and server log files',
+          paragraphs: [
+            'This website is hosted by Hetzner Online GmbH, Industriestr. 25, 91710 Gunzenhausen, Germany. A data processing agreement pursuant to Art. 28 GDPR is in place with the provider; the servers are located in the EU.',
+            'When you visit the website, the web server automatically stores technically necessary information: IP address, date and time of access, page or file requested, amount of data transferred, referrer URL, and browser type and operating system. This data is used solely to operate the website securely and reliably and is not combined with other data sources. The legal basis is our legitimate interest pursuant to Art. 6(1)(f) GDPR. Log files are kept only as long as necessary for this purpose and are then deleted.',
+          ],
+        },
+        {
+          heading: 'Cookies and local storage',
+          paragraphs: [
+            'This website does not use cookies. If you switch the language (German/English), your choice is saved in your browser\'s local storage so that the website is shown in that language on your next visit. This information is not transmitted to us and can be deleted at any time in your browser settings. Storing it is strictly necessary for the function you requested (§ 165(3) TKG 2021).',
+          ],
+        },
+        {
+          heading: 'No analytics or tracking',
+          paragraphs: [
+            'We do not use web analytics, tracking or advertising services, or social media plugins. Fonts are loaded locally from our own server; no data is transferred to third parties.',
+          ],
+        },
+        {
+          heading: 'Contacting us',
+          paragraphs: [
+            'If you contact us by email or phone, we process the data you provide (e.g. name, contact details, content of your enquiry) to handle your request and any follow-up questions. The legal basis is Art. 6(1)(b) GDPR (pre-contractual measures or performance of a contract) or our legitimate interest in answering enquiries (Art. 6(1)(f) GDPR). The data is deleted once it is no longer needed, unless statutory retention obligations (e.g. under the Austrian UGB or BAO) apply.',
+          ],
+        },
+        {
+          heading: 'Links to other websites',
+          paragraphs: [
+            'Our website contains links to external websites (e.g. the WKO company directory). The respective operator is responsible for data processing on those websites.',
+          ],
+        },
+        {
+          heading: 'Your rights',
+          paragraphs: [
+            'You have the right to access, rectification, erasure, restriction of processing, data portability and objection. To exercise these rights, please use the contact details above.',
+            'If you believe that the processing of your data violates data protection law, you can lodge a complaint with the supervisory authority. In Austria, this is the Datenschutzbehörde, Barichgasse 40–42, 1030 Vienna, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a>.',
+          ],
+        },
+      ],
+      updated: 'Last updated: October 2026',
     },
 
     langLabel: 'EN',

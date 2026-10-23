@@ -28,10 +28,16 @@ Done:
 * New logo with "Fenster und Türen Handels GmbH" (images/luxbell_logo.svg); faint logo watermark top-right on every page
 * Logo files for the client in branding/ (SVG, PDF, PNG; plus variant with "LUXBELL" spelling)
 
-Open (ask client):
-* Phone number unchanged?
-* New WKO link (old one removed)
-* IDEAL 8000: bullet points / flyer? IDEAL NEO flyer?
-* Logo spelling: "LUX bell" (as before) or "LUXBELL"?
-* Datenschutzerklärung still missing
-* Email forwarding office@luxbell-fenster.at → office@luxbell.at is a mail setting at the host (Hetzner konsoleH), not a website change
+Round 2 (client answers):
+* Website watermark removed again – the logo watermark was meant for the PDFs, not the site
+* Haustüren catalogue branded with the logo on every page (original kept in docs-src/, see README)
+* Logo spelling: LUXBELL (branding/luxbell_logo.*, images/luxbell_logo.svg)
+* Phone number confirmed unchanged
+* IDEAL 8000 bullet points added (from the fensterversand.at product page)
+* New WKO link in the Impressum
+* Datenschutzerklärung page added (DE/EN, nav + link from Impressum) – draft, have the client check it
+
+Open:
+* Should the Pflege & Wartung PDFs (aluplast / Schlotterer / WKF) also get the logo? They are manufacturer documents with their own branding
+* An additional PDF was mentioned but not received yet
+* Email forwarding office@luxbell-fenster.at → office@luxbell.at: set up in Hetzner webmail, client to test

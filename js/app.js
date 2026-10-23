@@ -16,7 +16,7 @@
     var hash = window.location.hash.slice(1) || 'home';
     var validIds = CONTENT.nav && CONTENT.nav.map(function (n) { return n.id; });
     if (validIds && validIds.indexOf(hash) !== -1) return hash;
-    if (hash === 'impressum') return hash;
+    if (hash === 'impressum' || hash === 'datenschutz') return hash;
     return 'home';
   }
 
@@ -78,9 +78,32 @@
         '<div class="impressum-block">' +
         '<p>' + [legal.tradeRegister, legal.vatId, legal.gisa, legal.taxNumber].filter(Boolean).join('<br>') + '<br><br>' + (legal.authority || '') + '</p>' +
         '</div>' +
-        '<p class="content-body"><small>Datenschutz: Bitte bei Bedarf eine eigene Datenschutzerklärung ergänzen (z.B. von einem Generator).</small></p>' +
+        '<p class="content-body"><a href="#datenschutz">' + ((CONTENT.datenschutz && CONTENT.datenschutz.title) || 'Datenschutzerklärung') + '</a></p>' +
         '</div>'
       );
+    }
+
+    if (pageId === 'datenschutz') {
+      var ds = CONTENT.datenschutz || {};
+      var dc = CONTENT.contact || {};
+      var dsHtml = '<div class="page-content datenschutz-page">';
+      dsHtml += '<h1 class="page-title">' + (ds.title || '') + '</h1>';
+      dsHtml += '<p class="content-body">' + (ds.intro || '') + '</p>';
+      dsHtml += '<h3 class="content-cta">' + (ds.controllerTitle || '') + '</h3>';
+      dsHtml += '<p class="content-body">' + ((CONTENT.impressum && CONTENT.impressum.companyFull) || CONTENT.companyName) + '<br>' +
+        (dc.address || '') + ', ' + (dc.postalCode || '') + ' ' + (dc.city || '') + '<br>' +
+        'Tel. ' + (dc.phone || '') + '<br>' +
+        'Mail: <a href="mailto:' + (dc.email || '') + '">' + (dc.email || '') + '</a></p>';
+      (ds.sections || []).forEach(function (sec) {
+        dsHtml += '<h3 class="content-cta">' + sec.heading + '</h3>';
+        (sec.paragraphs || []).forEach(function (para) {
+          dsHtml += '<p class="content-body">' + para + '</p>';
+        });
+      });
+      if (ds.updated) {
+        dsHtml += '<p class="content-body"><small>' + ds.updated + '</small></p>';
+      }
+      return dsHtml + '</div>';
     }
 
     if (!page) {
@@ -248,6 +271,8 @@
     });
     var impLabel = CONTENT.impressum && CONTENT.impressum.title ? CONTENT.impressum.title : 'Impressum';
     listHtml += '<li><a href="#impressum" data-page="impressum">' + impLabel + '</a></li>';
+    var dsLabel = CONTENT.datenschutz && CONTENT.datenschutz.title ? CONTENT.datenschutz.title : 'Datenschutz';
+    listHtml += '<li><a href="#datenschutz" data-page="datenschutz">' + dsLabel + '</a></li>';
 
     var listEl = document.getElementById('nav-list');
     if (listEl) listEl.innerHTML = listHtml;
@@ -280,6 +305,8 @@
       document.title = (page.title || '') + ' - ' + (CONTENT.siteTitle || 'LUXbell');
     } else if (pageId === 'impressum') {
       document.title = (CONTENT.impressum && CONTENT.impressum.title ? CONTENT.impressum.title : 'Impressum') + ' - ' + (CONTENT.siteTitle || 'LUXbell');
+    } else if (pageId === 'datenschutz') {
+      document.title = (CONTENT.datenschutz && CONTENT.datenschutz.title ? CONTENT.datenschutz.title : 'Datenschutz') + ' - ' + (CONTENT.siteTitle || 'LUXbell');
     } else {
       document.title = CONTENT.siteTitle || 'LUXbell';
     }
